@@ -1,11 +1,19 @@
 const utils = require('./utils');
 
 it('should add 2 number', () => {
-    const sum = utils.sum(2, 3);
-    expect(sum).toEqual(5);
+    const res = utils.sum(2, 3);
+    expect(res).toEqual(5);
 });
 
 it ('should square a number', () => {
-    const square = utils.square(2);
-    expect(square).toEqual(4);
+    const res = utils.square(2);
+    expect(res).toEqual(4);
+});
+
+
+it ('should handle async square', (done) => {
+    utils.asyncSquare(2, (res) => {
+        expect(res).toEqual(4);
+        done();
+    });
 });

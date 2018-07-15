@@ -1,0 +1,20 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "jest": {
+    "testMatch": ["<rootDir>/**/*.test.js"],
+    "testPathIgnorePatterns": ["<rootDir>/node_modules"]
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^23.4.1"
+  }
+}
